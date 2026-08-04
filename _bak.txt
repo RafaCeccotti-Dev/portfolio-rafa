@@ -1,0 +1,53 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: C4BE-AE94
+
+ Directorio de C:\Users\Muni\AppData\Local\Temp\portfolio-rafa-git-bak
+
+04/08/2026  09:59    <DIR>          .
+04/08/2026  09:59    <DIR>          ..
+04/08/2026  09:59    <DIR>          .git
+04/08/2026  09:59    <DIR>          objects
+               0 archivos              0 bytes
+               4 dirs  77.296.967.680 bytes libres
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: C4BE-AE94
+
+ Directorio de C:\Users\Muni\AppData\Local\Temp\push-portfolio-rafa\.git
+
+04/08/2026  09:59    <DIR>          .
+04/08/2026  09:59    <DIR>          ..
+04/08/2026  09:58                15 COMMIT_EDITMSG
+04/08/2026  09:59               406 config
+04/08/2026  09:58                73 description
+04/08/2026  09:58                21 HEAD
+04/08/2026  09:58    <DIR>          hooks
+04/08/2026  09:58             2.726 index
+04/08/2026  09:58    <DIR>          info
+04/08/2026  09:58    <DIR>          logs
+04/08/2026  09:58    <DIR>          objects
+04/08/2026  09:59    <DIR>          refs
+               5 archivos          3.241 bytes
+               7 dirs  77.296.967.680 bytes libres
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: C4BE-AE94
+
+ Directorio de C:\Users\Muni\AppData\Local\Temp\portfolio-rafa.git.bak-272014425
+
+04/08/2026  09:58    <DIR>          .
+04/08/2026  09:58    <DIR>          ..
+04/08/2026  09:45               223 COMMIT_EDITMSG
+04/08/2026  09:46               439 config
+17/06/2026  08:36                73 description
+04/08/2026  09:56               237 FETCH_HEAD
+04/08/2026  09:58    <DIR>          gk
+17/06/2026  08:36                21 HEAD
+04/08/2026  09:58    <DIR>          hooks
+04/08/2026  09:45             2.726 index
+04/08/2026  09:58    <DIR>          info
+04/08/2026  09:58    <DIR>          logs
+04/08/2026  09:58    <DIR>          objects
+30/07/2026  12:32                41 ORIG_HEAD
+03/08/2026  12:20               169 packed-refs
+04/08/2026  09:58    <DIR>          refs
+               8 archivos          3.929 bytes
+               8 dirs  77.296.967.680 bytes libres

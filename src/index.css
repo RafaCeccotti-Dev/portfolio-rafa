@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Instrument Serif", Georgia, serif;
-  --color-ink: #08090c;
-  --color-panel: #11141a;
-  --color-line: #262b36;
-  --color-mute: #9aa3b2;
+  --color-ink: #0c1018;
+  --color-panel: #161b26;
+  --color-line: #2a3140;
+  --color-mute: #a3acbb;
   --color-accent: #6ee7b7;
   --color-accent-dim: #34d399;
 }
@@ -17,12 +17,20 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-ink);
-  color: #f4f6fa;
+  background: #0c1018;
+  color: #f3f5f8;
   font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
+  letter-spacing: -0.011em;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
 }
 
 ::selection {
@@ -32,4 +40,10 @@ body {
 
 body.modal-open {
   overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15.5px;
+  }
 }

@@ -54,6 +54,8 @@ const CAPABILITIES = [
   { name: "Vercel", icon: SiVercel, color: "#ffffff" },
 ]
 
+const TORNEO_URL = "https://torneo-ardillitas.vercel.app"
+
 const PROJECTS = [
   {
     id: "stock",
@@ -79,7 +81,7 @@ const PROJECTS = [
     description:
       "Diseñé y desarrollé el sitio del torneo infantil de fútbol: fixture, tablas por categoría, cruces, mapa del club, auspiciantes, preinscripción y panel administrativo para coordinadores. Publicado y en uso.",
     tags: ["Next.js", "React", "Supabase", "Tailwind", "Vercel"],
-    link: "https://torneo-ardillitas.vercel.app",
+    link: TORNEO_URL,
     image: imgTorneo,
     detail: {
       role: "Autor · Full Stack Developer",
@@ -93,7 +95,7 @@ const PROJECTS = [
         "Mapa del club, sección de auspiciantes y diseño pensado para usarse en la cancha",
       ],
       note: null,
-      liveUrl: "https://torneo-ardillitas.vercel.app",
+      liveUrl: TORNEO_URL,
     },
   },
   {
@@ -185,7 +187,7 @@ const EXPERIENCE = [
     company: "Gobierno de la Ciudad de Ceres",
     period: "Junio 2026 — Actualidad",
     description:
-      "Desarrollo y evolución de productos digitales municipales en producción. Implemento mejoras, doy soporte operativo y acompaño el día a día de aplicaciones web, paneles internos e integraciones.",
+      "Desarrollo y evolución de productos digitales ciudadanos en producción: chatbots, plataformas web, paneles internos, backends e integraciones. Participo en la implementación de funcionalidades, mejoras de experiencia y soporte operativo sobre varios sistemas en paralelo, con foco en claridad, mantenimiento y entregas continuas.",
   },
 ]
 
@@ -193,7 +195,7 @@ const EDUCATION = [
   {
     title: "Técnico Universitario en Programación",
     institution: "Universidad Tecnológica Nacional — FRRA",
-    period: null,
+    period: "Febrero 2022 — Mayo 2025",
   },
 ]
 
@@ -467,17 +469,31 @@ function App() {
   const [activeProject, setActiveProject] = useState(null)
 
   return (
-    <div className="min-h-screen bg-ink text-white">
+    <div className="relative min-h-screen overflow-x-hidden text-white">
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 opacity-[0.35]"
+        className="pointer-events-none fixed inset-0 -z-10"
+        style={{
+          background: `
+            radial-gradient(ellipse 90% 60% at 8% -5%, rgba(110,231,183,0.14), transparent 55%),
+            radial-gradient(ellipse 70% 50% at 95% 5%, rgba(96,165,250,0.08), transparent 50%),
+            radial-gradient(ellipse 60% 40% at 50% 100%, rgba(52,211,153,0.06), transparent 55%),
+            linear-gradient(165deg, #10141c 0%, #0c1018 42%, #151a24 100%)
+          `,
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 -z-10 opacity-[0.35]"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse 80% 50% at 8% -8%, rgba(110,231,183,0.11), transparent 55%), radial-gradient(ellipse 55% 40% at 92% 8%, rgba(148,163,184,0.07), transparent 50%)",
+            "radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+          maskImage: "radial-gradient(ellipse 80% 70% at 50% 30%, black, transparent)",
         }}
       />
 
-      <nav className="sticky top-0 z-50 border-b border-line/80 bg-ink/85 backdrop-blur-xl">
+      <nav className="sticky top-0 z-50 border-b border-line/70 bg-[#0c1018]/75 backdrop-blur-xl">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3.5 md:px-8">
           <div>
             <p className="text-sm font-semibold tracking-wide text-white">Rafael Ceccotti</p>
@@ -517,7 +533,7 @@ function App() {
             </p>
             <div className="mt-7 flex flex-wrap gap-2.5">
               <a
-                href={`${import.meta.env.BASE_URL}Rafael_Ceccotti_CV.pdf?v=20260804d`}
+                                href={`${import.meta.env.BASE_URL}Rafael_Ceccotti_CV.pdf?v=20260804e`}
                 download="Rafael_Ceccotti_CV.pdf"
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-accent-dim"
               >
@@ -688,10 +704,14 @@ function App() {
             <h2 className="font-display text-3xl text-white md:text-4xl">Educación</h2>
             <div className="mt-6 max-w-2xl">
               {EDUCATION.map((item) => (
-                <div key={item.title} className="rounded-xl border border-line bg-panel p-5">
-                  <h3 className="font-semibold text-white">{item.title}</h3>
-                  <p className="mt-1 text-sm text-mute">{item.institution}</p>
-                  {item.period ? <p className="mt-1.5 text-sm text-accent">{item.period}</p> : null}
+                <div key={item.title} className="rounded-2xl border border-line bg-panel/80 p-5 backdrop-blur-sm md:p-6">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                    <h3 className="font-semibold text-white">{item.title}</h3>
+                    {item.period ? (
+                      <p className="shrink-0 text-sm text-accent">{item.period}</p>
+                    ) : null}
+                  </div>
+                  <p className="mt-1.5 text-sm text-mute">{item.institution}</p>
                 </div>
               ))}
             </div>

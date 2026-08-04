@@ -1,0 +1,11 @@
+ El volumen de la unidad D no tiene etiqueta.
+ El n£mero de serie del volumen es: 3AC2-EC0C
+
+ Directorio de D:\Proyectos\portfolio-rafa\.git
+
+04/08/2026  09:59    <DIR>          .
+04/08/2026  09:59    <DIR>          ..
+04/08/2026  09:59    <DIR>          .git
+04/08/2026  09:58    <DIR>          objects
+               0 archivos              0 bytes
+               4 dirs  4.469.154.312.192 bytes libres
