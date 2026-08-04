@@ -162,7 +162,7 @@ const PROJECTS = [
     description:
       "Mantenimiento y mejoras persistentes sobre la plataforma municipal de servicios locales ya en producción.",
     tags: ["Next.js", "TypeScript", "Tailwind"],
-    link: null,
+    link: "https://ceresenred.ceres.gob.ar",
     image: imgCeresenred,
     detail: {
       role: "Full Stack Developer · Contribuciones",
@@ -399,7 +399,7 @@ function ContactForm() {
     "w-full rounded-lg border border-line bg-ink px-3.5 py-2.5 text-sm text-white placeholder:text-mute/60 outline-none transition focus:border-accent"
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-line bg-panel p-6">
+    <form onSubmit={handleSubmit} className="flex h-full flex-col space-y-4 rounded-2xl border border-line bg-panel p-6">
       <div>
         <label htmlFor="name" className="mb-1.5 block text-sm text-mute">
           Nombre
@@ -520,10 +520,10 @@ function App() {
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               Sobre mí
             </p>
-            <h1 className="font-display text-5xl leading-[1.08] text-white md:text-6xl">
+            <h1 className="font-display text-4xl leading-[1.12] text-white md:text-[2.75rem]">
               Rafael Ceccotti
             </h1>
-            <p className="mt-3 text-lg font-medium text-accent md:text-xl">
+            <p className="mt-2.5 text-base font-medium text-accent md:text-lg">
               Full Stack Developer
             </p>
             <p className="mt-5 max-w-2xl leading-relaxed text-mute">
@@ -533,7 +533,7 @@ function App() {
             </p>
             <div className="mt-7 flex flex-wrap gap-2.5">
               <a
-                                href={`${import.meta.env.BASE_URL}Rafael_Ceccotti_CV.pdf?v=20260804e`}
+                                                href={`${import.meta.env.BASE_URL}Rafael_Ceccotti_CV.pdf?v=20260804f`}
                 download="Rafael_Ceccotti_CV.pdf"
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-accent-dim"
               >
@@ -571,7 +571,7 @@ function App() {
         <section id="proyectos" className="border-t border-line">
           <div className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-16">
             <div className="mb-8 max-w-2xl">
-              <h2 className="font-display text-3xl text-white md:text-4xl">Proyectos</h2>
+              <h2 className="font-display text-3xl text-white md:text-[2.35rem]">Proyectos</h2>
               <p className="mt-3 text-mute">
                 Productos propios y contribuciones a sistemas municipales. En los proyectos con
                 captura podés abrir el detalle.
@@ -720,38 +720,48 @@ function App() {
 
         <section id="contacto" className="border-t border-line">
           <div className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-16">
-            <h2 className="font-display text-3xl text-white md:text-4xl">Contacto</h2>
-            <p className="mt-3 max-w-xl leading-relaxed text-mute">
-              Abierto a proyectos, consultas y oportunidades Full Stack, Frontend o Backend.
-              Escribime por el formulario o a{" "}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-accent hover:text-white">
-                {CONTACT_EMAIL}
-              </a>
-              .
-            </p>
-            <div className="mt-8 grid items-start gap-8 lg:grid-cols-2">
+            <div className="max-w-2xl">
+              <h2 className="font-display text-3xl text-white md:text-[2.35rem]">Contacto</h2>
+              <p className="mt-3 leading-relaxed text-mute">
+                Abierto a proyectos, consultas y oportunidades Full Stack, Frontend o Backend.
+                Escribime por el formulario o a{" "}
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-accent hover:text-white">
+                  {CONTACT_EMAIL}
+                </a>
+                .
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(260px,0.8fr)] lg:items-stretch">
               <ContactForm />
-              <div className="flex flex-col gap-2.5 lg:pt-1">
-                <p className="text-sm text-mute">También en:</p>
-                <a
-                  href={LINKS.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-2 rounded-lg border border-line px-4 py-2.5 text-sm transition hover:border-accent hover:text-accent"
-                >
-                  <FaLinkedin />
-                  LinkedIn
-                </a>
-                <a
-                  href={LINKS.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-2 rounded-lg border border-line px-4 py-2.5 text-sm transition hover:border-accent hover:text-accent"
-                >
-                  <FaGithub />
-                  GitHub
-                </a>
-              </div>
+              <aside className="flex flex-col justify-between rounded-2xl border border-line bg-panel/80 p-6">
+                <div>
+                  <p className="text-sm font-medium text-white">También en</p>
+                  <p className="mt-1 text-sm leading-relaxed text-mute">
+                    Podés escribirme por acá o seguirme en estas redes.
+                  </p>
+                </div>
+                <div className="mt-6 flex flex-col gap-2.5">
+                  <a
+                    href={LINKS.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border border-line px-4 py-2.5 text-sm transition hover:border-accent hover:text-accent"
+                  >
+                    <FaLinkedin />
+                    LinkedIn
+                  </a>
+                  <a
+                    href={LINKS.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border border-line px-4 py-2.5 text-sm transition hover:border-accent hover:text-accent"
+                  >
+                    <FaGithub />
+                    GitHub
+                  </a>
+                </div>
+              </aside>
             </div>
           </div>
         </section>
