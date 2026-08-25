@@ -33,6 +33,7 @@ import imgCeresito from "./assets/projects/ceresito.png"
 import imgDashboard from "./assets/projects/dashboard.png"
 import imgCeresenred from "./assets/projects/ceresenred.png"
 import imgTorneo from "./assets/projects/torneo.png"
+import imgCampusVirtual from "./assets/projects/campus-virtual.png"
 
 const CAPABILITIES = [
   { name: "Java", icon: FaJava, color: "#007396" },
@@ -55,6 +56,7 @@ const CAPABILITIES = [
 ]
 
 const TORNEO_URL = "https://torneo-ardillitas.vercel.app"
+const CAMPUS_URL = "https://campusvirtual.ceres.gob.ar"
 
 const PROJECTS = [
   {
@@ -70,6 +72,33 @@ const PROJECTS = [
     link: null,
     image: null,
     detail: null,
+  },
+  {
+    id: "campus-virtual",
+    title: "Campus Virtual Municipal",
+    status: "En producción",
+    statusTone: "green",
+    category: "Municipal · Educación",
+    highlight: "Plataforma de cursos, diplomaturas y tecnicaturas para el municipio",
+    description:
+      "Diseñé y desarrollé el campus educativo municipal de punta a punta: roles admin, docente y alumno, alta de cursos y clases, y acceso web en producción para Educación.",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    link: CAMPUS_URL,
+    image: imgCampusVirtual,
+    detail: {
+      role: "Autor · Full Stack Developer",
+      period: "2026",
+      focusTitle: "Qué incluye",
+      summary:
+        "Educación necesitaba un campus propio para dictar cursos, diplomaturas y tecnicaturas sin depender de plataformas genéricas. Construí el producto completo — autenticación por DNI, paneles por rol y gestión de cursos — y lo dejé desplegado para uso real del municipio.",
+      focus: [
+        "Roles diferenciados: administración del campus, aula del docente y acceso del alumno",
+        "Alta de cursos, profesores y alumnos, con carga de clases desde el panel docente",
+        "Stack Next.js + TypeScript + Prisma + PostgreSQL, publicado en campusvirtual.ceres.gob.ar",
+      ],
+      note: null,
+      liveUrl: CAMPUS_URL,
+    },
   },
   {
     id: "torneo",
