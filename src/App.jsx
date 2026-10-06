@@ -34,6 +34,9 @@ import imgDashboard from "./assets/projects/dashboard.png"
 import imgCeresenred from "./assets/projects/ceresenred.png"
 import imgTorneo from "./assets/projects/torneo.png"
 import imgCampusVirtual from "./assets/projects/campus-virtual.png"
+import imgTrama from "./assets/projects/trama.png"
+import imgInscripcion from "./assets/projects/inscripcion-comercial.png"
+import imgBenditoBajon from "./assets/projects/bendito-bajon.png"
 
 const CAPABILITIES = [
   { name: "Java", icon: FaJava, color: "#007396" },
@@ -57,22 +60,9 @@ const CAPABILITIES = [
 
 const TORNEO_URL = "https://torneo-ardillitas.vercel.app"
 const CAMPUS_URL = "https://campusvirtual.ceres.gob.ar"
+const BENDITO_URL = "https://bendito-bajon.pages.dev"
 
 const PROJECTS = [
-  {
-    id: "stock",
-    title: "Sistema de Stock y Ventas",
-    status: "Proyecto final",
-    statusTone: "green",
-    category: "Producto propio",
-    highlight: "Inventario, clientes y ventas en una sola app desktop",
-    description:
-      "Aplicación de escritorio en Java + MySQL con arquitectura MVC. Administra productos, clientes, ventas y stock con actualización automática. Proyecto propio de punta a punta.",
-    tags: ["Java", "MVC", "MySQL", "JDBC"],
-    link: null,
-    image: null,
-    detail: null,
-  },
   {
     id: "campus-virtual",
     title: "Campus Virtual Municipal",
@@ -81,7 +71,7 @@ const PROJECTS = [
     category: "Municipal · Educación",
     highlight: "Plataforma de cursos, diplomaturas y tecnicaturas para el municipio",
     description:
-      "Diseñé y desarrollé el campus educativo municipal de punta a punta: roles admin, docente y alumno, alta de cursos y clases, y acceso web en producción para Educación.",
+      "Diseñé y desarrollé el campus educativo municipal de punta a punta: roles admin, docente y alumno, clases con videos de YouTube y materiales de Google Drive, y acceso web en producción con alumnos cursando.",
     tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
     link: CAMPUS_URL,
     image: imgCampusVirtual,
@@ -92,39 +82,13 @@ const PROJECTS = [
       summary:
         "Educación necesitaba un campus propio para dictar cursos, diplomaturas y tecnicaturas sin depender de plataformas genéricas. Construí el producto completo — autenticación por DNI, paneles por rol y gestión de cursos — y lo dejé desplegado para uso real del municipio.",
       focus: [
-        "Roles diferenciados: administración del campus, aula del docente y acceso del alumno",
-        "Alta de cursos, profesores y alumnos, con carga de clases desde el panel docente",
-        "Stack Next.js + TypeScript + Prisma + PostgreSQL, publicado en campusvirtual.ceres.gob.ar",
+        "Roles diferenciados: administración del campus, aula del docente y acceso del alumno con login por DNI y cambio de contraseña obligatorio",
+        "Los docentes crean y editan sus clases solos: videos de YouTube embebidos y materiales enlazados desde Google Drive",
+        "Alta masiva de alumnos por curso, cierre de sesión seguro y middleware de permisos por rol",
+        "SEO técnico (sitemap, robots y verificación en Google Search Console) y publicación en campusvirtual.ceres.gob.ar",
       ],
       note: null,
       liveUrl: CAMPUS_URL,
-    },
-  },
-  {
-    id: "torneo",
-    title: "Torneo Ardillitas",
-    status: "En producción",
-    statusTone: "green",
-    category: "Producto propio · Deportes",
-    highlight: "Web completa para organizar y consultar el torneo en vivo",
-    description:
-      "Diseñé y desarrollé el sitio del torneo infantil de fútbol: fixture, tablas por categoría, cruces, mapa del club, auspiciantes, preinscripción y panel administrativo para coordinadores. Publicado y en uso.",
-    tags: ["Next.js", "React", "Supabase", "Tailwind", "Vercel"],
-    link: TORNEO_URL,
-    image: imgTorneo,
-    detail: {
-      role: "Autor · Full Stack Developer",
-      period: "2026",
-      focusTitle: "Qué incluye",
-      summary:
-        "El torneo necesitaba una web clara para familias, jugadores y organizadores: ver partidos del día, tablas y resultados sin depender de Excel ni grupos de WhatsApp. Construí el producto completo — front público, panel de carga y backend — para que la información del campeonato esté siempre disponible desde el celular o la PC.",
-      focus: [
-        "Vista pública con partidos del día, tablas por categoría y cruces de playoff",
-        "Panel de coordinadores para cargar equipos, resultados y gestionar la preinscripción",
-        "Mapa del club, sección de auspiciantes y diseño pensado para usarse en la cancha",
-      ],
-      note: null,
-      liveUrl: TORNEO_URL,
     },
   },
   {
@@ -135,8 +99,8 @@ const PROJECTS = [
     category: "Municipal · Asistente ciudadano",
     highlight: "Asistente conversacional oficial del municipio",
     description:
-      "Contribuciones al asistente conversacional municipal en producción: evolución de flujos, soporte operativo y mejoras continuas sobre el canal digital que usan los vecinos.",
-    tags: ["TypeScript", "Node.js", "PostgreSQL"],
+      "Contribuciones al asistente de WhatsApp del municipio en producción: nuevos flujos como la inscripción de poda con foto, reclamos con imagen, certificados en PDF y avisos a vecinos con plantillas de la API de WhatsApp.",
+    tags: ["TypeScript", "Node.js", "PostgreSQL", "WhatsApp Cloud API"],
     link: null,
     image: imgCeresito,
     detail: {
@@ -146,9 +110,11 @@ const PROJECTS = [
       summary:
         "Ceresito es el canal conversacional del municipio para atención ciudadana: trámites, reclamos, información de servicios y campañas. El problema de fondo era la saturación de la atención presencial y la falta de un canal digital accesible, sin apps ni registros complejos. La solución es un asistente por mensajería con flujos estructurados y panel de gestión interna. Mi trabajo se centra en mantener y evolucionar ese producto en producción: flujos, contenidos y continuidad operativa.",
       focus: [
-        "Ajustes y evolución de flujos conversacionales según necesidades de cada área",
-        "Soporte operativo ante cambios de contenido, campañas y eventos",
-        "Mejoras de experiencia y mantenimiento continuo del servicio en producción",
+        "Flujo de inscripción a la poda 2026 con recepción y guardado de fotos, integrado con Google Sheets y el panel",
+        "Reclamos con foto opcional en la misma conversación, mirror de imágenes y fechas en formato local",
+        "Certificados del 5° Congreso de Mujeres generados en PDF y enviados por el bot a partir del DNI",
+        "Avisos a vecinos sobre el estado de sus reclamos mediante plantillas aprobadas de WhatsApp Cloud API",
+        "Mejoras de menú, despedidas y cierre por inactividad, más scripts de deploy en el VPS",
       ],
       note: null,
       liveUrl: null,
@@ -162,8 +128,8 @@ const PROJECTS = [
     category: "Municipal · Panel interno",
     highlight: "Panel de gestión para la operación diaria del municipio",
     description:
-      "Contribuciones al panel interno municipal: nuevos módulos operativos, mejoras de interfaz y soporte a la gestión diaria de las áreas.",
-    tags: ["React", "Next.js", "TypeScript"],
+      "Contribuciones al panel interno municipal: módulo de vehículos de Policía Municipal, rastreo GPS de la flota, reclamos y poda con fotos y exportaciones a Excel/PDF para la gestión diaria de las áreas.",
+    tags: ["React", "Next.js", "TypeScript", "PostgreSQL"],
     link: null,
     image: imgDashboard,
     detail: {
@@ -173,11 +139,70 @@ const PROJECTS = [
       summary:
         "El Dashboard es la herramienta interna con la que las áreas municipales gestionan reclamos, métricas y operación diaria. El desafío es sostener un panel en uso real, con usuarios internos que necesitan flujos claros y módulos concretos. Trabajo sobre mejoras persistentes, usabilidad y desarrollo de funcionalidades nuevas dentro de ese entorno.",
       focus: [
-        "Módulo de planilla de vehículos de Policía Municipal: digitaliza la entrega y recepción en cada cambio de turno (kilómetros, estado del vehículo, equipamiento, observaciones e inspector a cargo), con historial consultable para reemplazar la planilla en papel",
-        "Mejoras de interfaz y flujos de trabajo orientadas a la operación diaria",
-        "Mantenimiento y evolución continua de módulos ya desplegados",
+        "Módulo de planilla de vehículos de Policía Municipal: digitaliza la entrega y recepción en cada cambio de turno (kilómetros, estado del vehículo, equipamiento, fotos del tablero e inspector a cargo), con historial consultable y borrado en lote; además se desplegó como app propia en su subdominio con acceso restringido",
+        "Usuario jefe de vehículos con login redirigido según permisos y sección de rastreo DaGPS con los IMEI de la flota y de Ojos en Alerta",
+        "Reclamos y poda con imagen en el listado, eliminación desde el panel y exportación a Excel y PDF con fotos embebidas",
+        "Panel de poda leyendo directo de Google Sheets, con validación de imágenes y proxy local para servirlas",
+        "Envío de notificaciones a vecinos por plantillas de WhatsApp desde el seguimiento de reclamos",
       ],
       note: "Uso interno del Gobierno de la Ciudad de Ceres. Sin acceso público.",
+      liveUrl: null,
+    },
+  },
+  {
+    id: "trama",
+    title: "TRAMA",
+    status: "En producción",
+    statusTone: "green",
+    category: "Producto propio · Estudio de arquitectura",
+    highlight: "App de gestión de obras para Trama Studio",
+    description:
+      "Diseñé y desarrollé la app interna del estudio de arquitectura donde también trabajo: obras, fotos, tareas, presupuestos, contratistas, diario de obra y documentos sincronizados con Google Drive. En uso diario por el equipo.",
+    tags: ["Next.js", "TypeScript", "Supabase", "Google Drive", "Vercel"],
+    link: null,
+    image: imgTrama,
+    detail: {
+      role: "Autor · Full Stack Developer",
+      period: "2026",
+      focusTitle: "Qué incluye",
+      summary:
+        "El estudio llevaba el seguimiento de cada obra repartido entre chats, carpetas y planillas. Construí una app propia para centralizarlo: cada socio entra con su usuario y encuentra en un solo lugar el estado de las obras, las tareas pendientes, los presupuestos y la documentación, con todo lo pesado guardado en el Drive del estudio.",
+      focus: [
+        "Autenticación por usuario y gestión completa de obras, con alta, edición y baja",
+        "Fotos de obra comprimidas en el navegador y subidas a Google Drive mediante Apps Script",
+        "Tareas con responsable, prioridad, fecha y estado; contratistas asignados por obra",
+        "Presupuestos en carpetas anidadas con navegación por breadcrumbs y carga de PDF, Excel y Word",
+        "Diario de obra con reporte semanal y documentos de cada obra sincronizados con Drive",
+      ],
+      note: "Herramienta de gestión interna del estudio: el acceso está restringido a los socios, por eso no tiene link público.",
+      liveUrl: null,
+    },
+  },
+  {
+    id: "inscripcion-comercial",
+    title: "Inscripción Comercial",
+    status: "En desarrollo",
+    statusTone: "amber",
+    category: "Municipal · Trámites digitales",
+    highlight: "Portal ciudadano de habilitaciones comerciales integrado con GDI",
+    description:
+      "Portal para que los comercios inicien el alta o la modificación de su habilitación en línea: carga de documentación, planilla oficial de DREI en PDF y expediente generado automáticamente en el sistema de gestión documental GDI.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "Zod", "GDI / TAD"],
+    link: null,
+    image: imgInscripcion,
+    detail: {
+      role: "Autor · Full Stack Developer",
+      period: "2026",
+      focusTitle: "Qué incluye",
+      summary:
+        "Las habilitaciones comerciales se iniciaban en papel y en mostrador. Desarrollé un portal ciudadano para hacer el trámite completo desde la computadora o el celular, que entrega todo directamente en el sistema documental del municipio para que DREI lo revise sin volver a cargar nada.",
+      focus: [
+        "Flujo guiado de alta y modificación según el nomenclador de actividades municipal",
+        "Planilla oficial de DREI completada en el portal y generada en PDF con el mismo formato que la de mostrador",
+        "Integración con GDI y TAD: creación del expediente, vinculación por CUIT y webhook de novedades",
+        "Avisos por email al vecino ante cada cambio del trámite y validación de archivos de hasta 20 MB",
+      ],
+      note: "En etapa de pruebas con el área de DREI, previo a su lanzamiento público.",
       liveUrl: null,
     },
   },
@@ -208,6 +233,76 @@ const PROJECTS = [
       liveUrl: "https://ceresenred.ceres.gob.ar",
     },
   },
+  {
+    id: "torneo",
+    title: "Torneo Ardillitas",
+    status: "En desarrollo",
+    statusTone: "amber",
+    category: "Producto propio · Deportes",
+    highlight: "Web completa para organizar y consultar el torneo en vivo",
+    description:
+      "Diseñé y desarrollé el sitio del torneo infantil de fútbol: fixture, tablas por categoría, cruces, auspiciantes, preinscripción, contacto por WhatsApp y panel administrativo para coordinadores. Próximo a lanzarse al público.",
+    tags: ["Next.js", "React", "Supabase", "Tailwind", "Vercel"],
+    link: TORNEO_URL,
+    image: imgTorneo,
+    detail: {
+      role: "Autor · Full Stack Developer",
+      period: "2026",
+      focusTitle: "Qué incluye",
+      summary:
+        "El torneo necesitaba una web clara para familias, jugadores y organizadores: ver partidos del día, tablas y resultados sin depender de Excel ni grupos de WhatsApp. Construí el producto completo — front público, panel de carga y backend — para que la información del campeonato esté siempre disponible desde el celular o la PC.",
+      focus: [
+        "Vista pública con partidos del día, tablas por categoría y cruces de playoff",
+        "Panel de coordinadores para cargar equipos (un club en varias categorías a la vez), resultados y preinscripción",
+        "Carrusel animado de auspiciantes con logos normalizados y botón flotante de WhatsApp con la mascota",
+        "Contactos de inscripción por rama (masculino y femenino), mapa del club y diseño pensado para usarse en la cancha",
+      ],
+      note: "Ya cargando equipos con los coordinadores, antes de abrirse al público.",
+      liveUrl: TORNEO_URL,
+    },
+  },
+  {
+    id: "bendito-bajon",
+    title: "Bendito Bajón",
+    status: "En desarrollo",
+    statusTone: "amber",
+    category: "Producto propio · E-commerce gastronómico",
+    highlight: "Tienda online de una hamburguesería con pago por Mercado Pago",
+    description:
+      "Sitio y carrito de pedidos para una hamburguesería de Ceres: menú, promos, pago con Mercado Pago Checkout Pro y confirmación por WhatsApp. Identidad visual propia con mascota animada. Próximo a lanzarse.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind", "Cloudflare", "Mercado Pago"],
+    link: BENDITO_URL,
+    image: imgBenditoBajon,
+    detail: {
+      role: "Autor · Full Stack Developer",
+      period: "2026",
+      focusTitle: "Qué incluye",
+      summary:
+        "La hamburguesería tomaba todos los pedidos por mensaje, sin menú actualizado ni cobro online. Armé una tienda propia, liviana y rápida desde el celular, donde el cliente arma su pedido, paga online y el local lo recibe confirmado por WhatsApp.",
+      focus: [
+        "Menú con burgers, papas, postres y promos, y carrito persistente",
+        "Cobro con Mercado Pago Checkout Pro a través de una función serverless en Cloudflare Pages",
+        "Confirmación del pedido por WhatsApp con el detalle armado automáticamente",
+        "Identidad visual con mascota querubín, cielo animado y diseño mobile-first",
+      ],
+      note: "En etapa final: falta conectar la cuenta de Mercado Pago del local antes de abrirse al público.",
+      liveUrl: BENDITO_URL,
+    },
+  },
+  {
+    id: "stock",
+    title: "Sistema de Stock y Ventas",
+    status: "Proyecto final",
+    statusTone: "green",
+    category: "Producto propio",
+    highlight: "Inventario, clientes y ventas en una sola app desktop",
+    description:
+      "Aplicación de escritorio en Java + MySQL con arquitectura MVC. Administra productos, clientes, ventas y stock con actualización automática. Proyecto propio de punta a punta.",
+    tags: ["Java", "MVC", "MySQL", "JDBC"],
+    link: null,
+    image: null,
+    detail: null,
+  },
 ]
 
 const EXPERIENCE = [
@@ -217,6 +312,13 @@ const EXPERIENCE = [
     period: "Junio 2026 — Actualidad",
     description:
       "Desarrollo y evolución de productos digitales ciudadanos en producción: chatbots, plataformas web, paneles internos, backends e integraciones. Participo en la implementación de funcionalidades, mejoras de experiencia y soporte operativo sobre varios sistemas en paralelo, con foco en claridad, mantenimiento y entregas continuas.",
+  },
+  {
+    role: "Desarrollador de software",
+    company: "Trama Studio — Estudio de arquitectura",
+    period: "Septiembre 2026 — Actualidad",
+    description:
+      "Desarrollo y mantengo TRAMA, la app interna con la que el estudio gestiona sus obras: seguimiento de tareas, presupuestos, contratistas, diario de obra y documentación integrada con Google Drive.",
   },
 ]
 
@@ -246,6 +348,7 @@ function StatusBadge({ status, tone }) {
     green: "bg-emerald-500/15 text-emerald-300 border-emerald-400/30",
     mint: "bg-accent/15 text-accent border-accent/30",
     slate: "bg-white/5 text-mute border-line",
+    amber: "bg-amber-400/15 text-amber-300 border-amber-400/30",
   }
 
   return (
