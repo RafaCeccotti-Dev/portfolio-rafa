@@ -61,6 +61,7 @@ const CAPABILITIES = [
 const TORNEO_URL = "https://torneo-ardillitas.vercel.app"
 const CAMPUS_URL = "https://campusvirtual.ceres.gob.ar"
 const BENDITO_URL = "https://bendito-bajon.pages.dev"
+const DREI_URL = "https://drei.ceres.gob.ar"
 
 const PROJECTS = [
   {
@@ -181,14 +182,14 @@ const PROJECTS = [
   {
     id: "inscripcion-comercial",
     title: "Inscripción Comercial",
-    status: "En desarrollo",
-    statusTone: "amber",
+    status: "En producción",
+    statusTone: "green",
     category: "Municipal · Trámites digitales",
     highlight: "Portal ciudadano de habilitaciones comerciales integrado con GDI",
     description:
-      "Portal para que los comercios inicien el alta o la modificación de su habilitación en línea: carga de documentación, planilla oficial de DREI en PDF y expediente generado automáticamente en el sistema de gestión documental GDI.",
+      "Portal para que los comercios inicien el alta, la modificación o la baja de su habilitación en línea: carga de documentación, planilla oficial de DREI en PDF y expediente generado automáticamente en el sistema de gestión documental GDI.",
     tags: ["Next.js", "TypeScript", "Tailwind", "Zod", "GDI / TAD"],
-    link: null,
+    link: DREI_URL,
     image: imgInscripcion,
     detail: {
       role: "Autor · Full Stack Developer",
@@ -197,13 +198,13 @@ const PROJECTS = [
       summary:
         "Las habilitaciones comerciales se iniciaban en papel y en mostrador. Desarrollé un portal ciudadano para hacer el trámite completo desde la computadora o el celular, que entrega todo directamente en el sistema documental del municipio para que DREI lo revise sin volver a cargar nada.",
       focus: [
-        "Flujo guiado de alta y modificación según el nomenclador de actividades municipal",
+        "Flujo guiado de alta, modificación y baja según el nomenclador de actividades municipal",
         "Planilla oficial de DREI completada en el portal y generada en PDF con el mismo formato que la de mostrador",
-        "Integración con GDI y TAD: creación del expediente, vinculación por CUIT y webhook de novedades",
-        "Avisos por email al vecino ante cada cambio del trámite y validación de archivos de hasta 20 MB",
+        "Integración con GDI y TAD en producción: creación del expediente, vinculación por CUIT y webhook de novedades",
+        "Avisos por email al vecino ante cada cambio del trámite, con respuesta a DREI y validación de archivos de hasta 20 MB",
       ],
-      note: "En etapa de pruebas con el área de DREI, previo a su lanzamiento público.",
-      liveUrl: null,
+      note: "En producción en drei.ceres.gob.ar: vecinos y estudios contables ya inician trámites reales.",
+      liveUrl: DREI_URL,
     },
   },
   {
