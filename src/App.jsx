@@ -34,6 +34,7 @@ import imgDashboard from "./assets/projects/dashboard.png"
 import imgCeresenred from "./assets/projects/ceresenred.png"
 import imgTorneo from "./assets/projects/torneo.png"
 import imgCampusVirtual from "./assets/projects/campus-virtual.png"
+import imgTrama from "./assets/projects/trama.png"
 import imgInscripcion from "./assets/projects/inscripcion-comercial.png"
 import imgBenditoBajon from "./assets/projects/bendito-bajon.png"
 
