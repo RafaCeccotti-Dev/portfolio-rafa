@@ -34,7 +34,6 @@ import imgDashboard from "./assets/projects/dashboard.png"
 import imgCeresenred from "./assets/projects/ceresenred.png"
 import imgTorneo from "./assets/projects/torneo.png"
 import imgCampusVirtual from "./assets/projects/campus-virtual.png"
-import imgTrama from "./assets/projects/trama.png"
 import imgInscripcion from "./assets/projects/inscripcion-comercial.png"
 import imgBenditoBajon from "./assets/projects/bendito-bajon.png"
 
@@ -147,35 +146,6 @@ const PROJECTS = [
         "Envío de notificaciones a vecinos por plantillas de WhatsApp desde el seguimiento de reclamos",
       ],
       note: "Uso interno del Gobierno de la Ciudad de Ceres. Sin acceso público.",
-      liveUrl: null,
-    },
-  },
-  {
-    id: "trama",
-    title: "TRAMA",
-    status: "En producción",
-    statusTone: "green",
-    category: "Producto propio · Estudio de arquitectura",
-    highlight: "App de gestión de obras para Trama Studio",
-    description:
-      "Diseñé y desarrollé la app interna del estudio de arquitectura donde también trabajo: obras, fotos, tareas, presupuestos, contratistas, diario de obra y documentos sincronizados con Google Drive. En uso diario por el equipo.",
-    tags: ["Next.js", "TypeScript", "Supabase", "Google Drive", "Vercel"],
-    link: null,
-    image: imgTrama,
-    detail: {
-      role: "Autor · Full Stack Developer",
-      period: "2026",
-      focusTitle: "Qué incluye",
-      summary:
-        "El estudio llevaba el seguimiento de cada obra repartido entre chats, carpetas y planillas. Construí una app propia para centralizarlo: cada socio entra con su usuario y encuentra en un solo lugar el estado de las obras, las tareas pendientes, los presupuestos y la documentación, con todo lo pesado guardado en el Drive del estudio.",
-      focus: [
-        "Autenticación por usuario y gestión completa de obras, con alta, edición y baja",
-        "Fotos de obra comprimidas en el navegador y subidas a Google Drive mediante Apps Script",
-        "Tareas con responsable, prioridad, fecha y estado; contratistas asignados por obra",
-        "Presupuestos en carpetas anidadas con navegación por breadcrumbs y carga de PDF, Excel y Word",
-        "Diario de obra con reporte semanal y documentos de cada obra sincronizados con Drive",
-      ],
-      note: "Herramienta de gestión interna del estudio: el acceso está restringido a los socios, por eso no tiene link público.",
       liveUrl: null,
     },
   },
@@ -313,13 +283,6 @@ const EXPERIENCE = [
     period: "Junio 2026 — Actualidad",
     description:
       "Desarrollo y evolución de productos digitales ciudadanos en producción: chatbots, plataformas web, paneles internos, backends e integraciones. Participo en la implementación de funcionalidades, mejoras de experiencia y soporte operativo sobre varios sistemas en paralelo, con foco en claridad, mantenimiento y entregas continuas.",
-  },
-  {
-    role: "Desarrollador de software",
-    company: "Trama Studio — Estudio de arquitectura",
-    period: "Septiembre 2026 — Actualidad",
-    description:
-      "Desarrollo y mantengo TRAMA, la app interna con la que el estudio gestiona sus obras: seguimiento de tareas, presupuestos, contratistas, diario de obra y documentación integrada con Google Drive.",
   },
 ]
 
