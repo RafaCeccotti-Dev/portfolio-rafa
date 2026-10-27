@@ -660,7 +660,7 @@ function App() {
             </p>
             <div className="mt-7 flex flex-wrap gap-2.5">
               <a
-                                                href={`${import.meta.env.BASE_URL}Rafael_Ceccotti_CV.pdf?v=20260804f`}
+                                                href={`${import.meta.env.BASE_URL}Rafael_Ceccotti_CV.pdf?v=20261027`}
                 download="Rafael_Ceccotti_CV.pdf"
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-ink transition hover:bg-accent-dim"
               >
